@@ -1,0 +1,292 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>زاد المشاعر للإعاشة والحفلات الخارجية - نسخة للطباعة</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* A4 Print Styles */
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            @page {
+                size: A4;
+                margin: 20mm;
+            }
+            .no-print {
+                display: none !important;
+            }
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #ffffff; /* White background for printing */
+        }
+        .section-title {
+            @apply text-3xl font-bold text-slate-800 mb-2;
+        }
+        .section-subtitle {
+            @apply text-lg text-slate-500 mb-8 max-w-2xl mx-auto;
+        }
+        /* Override script-driven styles */
+        .tab-content,
+        .accordion-content,
+        .carousel-item {
+            display: block !important; /* Ensure all content is visible */
+            max-height: none !important;
+        }
+        .accordion-icon,
+        #prevBtn,
+        #nextBtn,
+        #menu-btn,
+        #mobile-menu {
+            display: none !important; /* Hide interactive elements */
+        }
+        .hero-section {
+            position: relative;
+            background-image: url('src/images/ZA-logo2.png');
+            background-size: cover;
+            background-position: center;
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.8);
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        /* Custom styles for better print layout */
+        .page-break {
+            page-break-after: always;
+        }
+        section, footer {
+            page-break-inside: avoid;
+        }
+        img {
+            max-width: 100% !important;
+            height: auto;
+        }
+        .carousel-item {
+            margin-bottom: 1.5rem; /* Add space between testimonial items */
+        }
+
+    </style>
+</head>
+<body class="bg-white text-slate-700">
+
+    <header class="bg-white sticky top-0 z-50 shadow-sm border-b">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-amber-600">زاد المشاعر</h1>
+            <div class="flex space-x-8 space-x-reverse">
+                <span class="text-slate-600">ملف تعريفي</span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero-section min-h-[40vh] flex items-center justify-center text-center py-20 px-4">
+        <div class="hero-overlay"></div>
+        <div class="hero-content max-w-4xl">
+            <h2 class="text-4xl md:text-6xl font-bold text-slate-800 leading-tight">حيث يلتقي الشغف بالجودة لتحقيق التميز</h2>
+            <p class="mt-4 text-xl text-slate-600">نقدم خدمات الإعاشة للحجاج والمعتمرين بأعلى معايير الدقة والاحترافية، لضمان تجربة إيمانية متكاملة ومريحة.</p>
+        </div>
+    </section>
+
+    <section id="about" class="py-12 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="section-title">زاد المشاعر في أرقام</h3>
+            <p class="section-subtitle">نفخر بقدراتنا التشغيلية وموقعنا الاستراتيجي الذي يمكننا من خدمة ضيوف الرحمن بكفاءة عالية.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="bg-slate-100 p-8 rounded-xl shadow-sm">
+                    <span class="text-5xl font-bold text-amber-500">17,000</span>
+                    <p class="mt-2 text-slate-600 font-medium">حاج يومياً</p>
+                    <p class="text-sm text-slate-500">قدرتنا التشغيلية لتقديم الوجبات خلال موسم الحج.</p>
+                </div>
+                <div class="bg-slate-100 p-8 rounded-xl shadow-sm">
+                    <span class="text-5xl font-bold text-amber-500">699</span>
+                    <p class="mt-2 text-slate-600 font-medium">متر مربع</p>
+                    <p class="text-sm text-slate-500">مساحة المطبخ المركزي المجهز بأحدث المعدات.</p>
+                </div>
+                <div class="bg-slate-100 p-8 rounded-xl shadow-sm">
+                    <span class="text-5xl font-bold text-amber-500">A</span>
+                    <p class="mt-2 text-slate-600 font-medium">تصنيف</p>
+                    <p class="text-sm text-slate-500">من أمانة العاصمة المقدسة لصحة البيئة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div class="page-break"></div>
+
+    <section id="quality" class="py-12">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <h3 class="section-title">الجودة والاعتمادات</h3>
+                <p class="section-subtitle">التزامنا بالجودة ليس مجرد شعار، بل هو نظام عمل متكامل موثق بشهادات واعتمادات محلية وعالمية تضمن أعلى مستويات الخدمة وسلامة الغذاء.</p>
+            </div>
+            <div class="md:grid md:grid-cols-2 md:gap-12 md:items-center max-w-6xl mx-auto">
+                <div class="mb-8 md:mb-0">
+                    <img src="src/images/2030.png" alt="فريق عمل زاد المشاعر يجهز الوجبات" class="rounded-xl shadow-lg w-full h-auto">
+                </div>
+                <div class="max-w-4xl mx-auto">
+                    <h4 class="text-xl font-bold text-slate-700 mb-4 border-b pb-2">المعايير العالمية (ISO)</h4>
+                    <div class="space-y-4 text-right mb-8">
+                        <div class="bg-white p-4 rounded-lg border border-slate-200">
+                            <h4 class="font-bold text-amber-600 text-lg mb-1">ISO 9001:2015 - نظام إدارة الجودة</h4>
+                            <p class="text-sm text-slate-500">يضمن أن جميع عملياتنا تتبع معايير عالمية صارمة لتحقيق رضا العملاء.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg border border-slate-200">
+                            <h4 class="font-bold text-amber-600 text-lg mb-1">ISO 45001:2018 - الصحة والسلامة المهنية</h4>
+                            <p class="text-sm text-slate-500">نوفر بيئة عمل آمنة وصحية لفريقنا، مما ينعكس إيجاباً على جودة الخدمة.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg border border-slate-200">
+                            <h4 class="font-bold text-amber-600 text-lg mb-1">ISO 22000:2018 - نظام إدارة سلامة الغذاء</h4>
+                            <p class="text-sm text-slate-500">نطبق أعلى معايير السلامة الغذائية في كل مراحل إعداد الطعام.</p>
+                        </div>
+                    </div>
+
+                    <h4 class="text-xl font-bold text-slate-700 mb-4 border-b pb-2">التصنيفات الرسمية</h4>
+                    <div class="space-y-4 text-right">
+                        <div class="bg-white p-4 rounded-lg border border-slate-200">
+                            <h4 class="font-bold text-amber-600 text-lg mb-1">الدرجة الأولى - وزارة الشؤون البلدية</h4>
+                            <p class="text-sm text-slate-500">تصنيف يعكس التزامنا بأعلى الاشتراطات الحكومية في قطاع الإعاشة.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg border border-slate-200">
+                            <h4 class="font-bold text-amber-600 text-lg mb-1">تصنيف (A) - صحة البيئة</h4>
+                            <p class="text-sm text-slate-500">شهادة على التزامنا الصارم بمعايير النظافة والصحة البيئية.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg border border-slate-200">
+                            <h4 class="font-bold text-amber-600 text-lg mb-1">اعتماد نسك - وزارة الحج والعمرة</h4>
+                            <p class="text-sm text-slate-500">مسجلون ضمن قائمة المطابخ المعتمدة لتقديم خدمات الإعاشة.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="page-break"></div>
+
+    <section id="partners" class="py-12 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="section-title">شركاء النجاح وثقة العملاء</h3>
+            <p class="section-subtitle">نفخر بشراكاتنا الاستراتيجية وبشهادات التقدير التي حصلنا عليها، والتي تمثل دليلاً على جودة خدماتنا وتفانينا في العمل.</p>
+            
+            <img src="src/images/hand-shaking.png" alt="فريق زاد المشاعر مع شركاء النجاح" class="rounded-xl shadow-lg w-full max-w-2xl mx-auto mb-12 h-auto">
+
+            <div class="max-w-3xl mx-auto space-y-6">
+                <div class="carousel-item">
+                    <div class="bg-slate-100 p-8 rounded-xl">
+                        <p class="text-lg text-slate-700">"نقدم خالص الشكر والتقدير لشركة زاد المشاعر لما قامت به من تقديم خدمة الإعاشة لحجاجنا بمشعر عرفة ومنى."</p>
+                        <p class="mt-4 font-bold text-amber-600">مركز حجاج ماليزيا</p>
+                        <p class="text-sm text-slate-500">موسم حج 1445هـ</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="bg-slate-100 p-8 rounded-xl">
+                        <p class="text-lg text-slate-700">"يسر مكتب شؤون حجاج جمهورية إندونيسيا أن يقدم خالص الشكر والتقدير لكم على المشاركة في خدمة الإعاشة للحجاج الإندونيسيين."</p>
+                        <p class="mt-4 font-bold text-amber-600">مكتب شؤون حجاج جمهورية إندونيسيا</p>
+                        <p class="text-sm text-slate-500">موسم حج 1445هـ</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="bg-slate-100 p-8 rounded-xl">
+                        <p class="text-lg text-slate-700">"إلى شريك النجاح زاد المشاعر، تقديراً لإبداعكم وامتناناً لتميزكم في إنجاح موسم حج 1445هـ."</p>
+                        <p class="mt-4 font-bold text-amber-600">شركة مشارق الماسية</p>
+                        <p class="text-sm text-slate-500">شريك استراتيجي</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div class="page-break"></div>
+
+    <section class="py-12">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <h3 class="section-title">الوثائق الرسمية والشفافية</h3>
+                <p class="section-subtitle">نؤمن بالشفافية الكاملة. يمكنكم الاطلاع على تفاصيل تراخيصنا وشهاداتنا الرسمية التي تؤكد التزامنا بالأنظمة والقوانين.</p>
+            </div>
+            <img src="src/images/2030.png" alt="مجموعة من شهادات وتراخيص زاد المشاعر" class="rounded-xl shadow-lg w-full max-w-2xl mx-auto mb-12 h-auto">
+            <div class="max-w-3xl mx-auto space-y-3">
+                <div class="bg-white rounded-lg border border-slate-200">
+                    <div class="p-4">
+                        <h4 class="font-medium text-slate-800 text-lg">شهادة تأهيل متعهد إعاشة في الحج والعمرة</h4>
+                    </div>
+                    <div class="p-4 border-t border-slate-200">
+                        <p><strong>رقم الشهادة:</strong> 615</p>
+                        <p><strong>الجهة المصدرة:</strong> مركز معلومات الإعاشة - أمانة العاصمة المقدسة</p>
+                        <p><strong>تاريخ التأهيل:</strong> 10-07-1445هـ</p>
+                        <p><strong>الطاقة التشغيلية بالمشاعر:</strong> 15,000 وجبة</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg border border-slate-200">
+                    <div class="p-4">
+                        <h4 class="font-medium text-slate-800 text-lg">رخصة نشاط تجاري</h4>
+                    </div>
+                    <div class="p-4 border-t border-slate-200">
+                        <p><strong>رقم الرخصة:</strong> 43000145837</p>
+                        <p><strong>الجهة المصدرة:</strong> بلدي - أمانة العاصمة المقدسة</p>
+                        <p><strong>النشاط:</strong> الإعاشة بالحج والتنمية في العاصمة المقدسة</p>
+                    </div>
+                </div>
+                 <div class="bg-white rounded-lg border border-slate-200">
+                    <div class="p-4">
+                        <h4 class="font-medium text-slate-800 text-lg">شهادة تسجيل في ضريبة القيمة المضافة (VAT)</h4>
+                    </div>
+                    <div class="p-4 border-t border-slate-200">
+                        <p><strong>الجهة المصدرة:</strong> هيئة الزكاة والضريبة والجمارك</p>
+                        <p>مؤسسة مسجلة رسمياً في نظام ضريبة القيمة المضافة بالمملكة العربية السعودية، مما يؤكد امتثالنا الكامل للوائح المالية.</p>
+                    </div>
+                </div>
+                 <div class="bg-white rounded-lg border border-slate-200">
+                     <div class="p-4">
+                        <h4 class="font-medium text-slate-800 text-lg">شهادة تصنيف من الدفاع المدني</h4>
+                    </div>
+                    <div class="p-4 border-t border-slate-200">
+                        <p><strong>الجهة المصدرة:</strong> المديرية العامة للدفاع المدني</p>
+                        <p>شهادة تؤكد أن منشآتنا تلتزم بأعلى معايير السلامة والوقاية من الحرائق لحماية الأرواح والممتلكات.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-slate-800 text-white py-12 mt-12">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-3xl font-bold">تواصلوا معنا</h3>
+            <p class="mt-2 text-slate-300">فريقنا مستعد دائماً للإجابة على استفساراتكم وتلبية طلباتكم.</p>
+            <div class="mt-8 flex flex-col md:flex-row justify-center items-center gap-8">
+                <div>
+                    <p class="font-medium">المفوض: صالح ناصر الغامدي</p>
+                </div>
+                <div class="h-8 w-px bg-slate-600 hidden md:block"></div>
+                <div>
+                    <p class="font-medium">رقم الجوال: <a href="tel:0500607502" class="hover:text-amber-400" dir="ltr">0500607502</a></p>
+                </div>
+                <div class="h-8 w-px bg-slate-600 hidden md:block"></div>
+                <div>
+                    <p class="font-medium">البريد الإلكتروني: <a href="mailto:zadalmashaeir@gmail.com" class="hover:text-amber-400">zadalmashaeir@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-slate-700 pt-8 text-sm text-slate-400">
+                <p>&copy; 2024 زاد المشاعر للإعاشة والحفلات الخارجية. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
